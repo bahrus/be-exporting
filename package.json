@@ -1,6 +1,16 @@
 {
   "name": "be-exporting",
   "version": "0.0.0",
+  "keywords": [
+    "web-components",
+    "web-component",
+    "custom-element",
+    "custom-elements",
+    "decorate",
+    "enhancement",
+    "behavior",
+    "directive"
+  ],
   "description": "",
   "main": "index.js",
   "files": [

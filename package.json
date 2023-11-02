@@ -3,9 +3,35 @@
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "files": [
+    "*.js",
+    "types.d.ts"
+  ],
+  "types": "types.d.ts",
+  "dependencies": {
+    "be-enhanced": "0.0.55",
+    "be-hive": "0.0.123",
+    "trans-render": "0.0.707",
+    "xtal-element": "0.0.579"
   },
-  "author": "",
+  "devDependencies": {
+    "@playwright/test": "1.39.0",
+    "may-it-serve": "0.0.6"
+  },
+  "scripts": {
+    "test": "playwright test",
+    "serve": "node node_modules/may-it-serve/serve.js",
+    "safari": "npx playwright wk http://localhost:3030",
+    "update": "ncu -u && npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bahrus/be-exporting.git"
+  },
+  "author": "anderson.bruce.b@gmail.com (Bruce Anderson)",
+  "bugs": {
+    "url": "https://github.com/bahrus/be-exporting/issues"
+  },
+  "homepage": "https://github.com/bahrus/be-exporting#readme",
   "license": "MIT"
 }

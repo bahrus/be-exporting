@@ -49,7 +49,11 @@ const xe = new XE<AP, Actions>({
             ...propInfo
         },
         actions:{
-
+            onCamelized: {
+                ifAllOf: ['isParsed'],
+                ifAtLeastOneOf: ['of', 'Of']
+            },
+            hydrate: 'exportingRules'
         }
     },
     superclass: BeExporting

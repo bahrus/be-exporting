@@ -1,7 +1,7 @@
 import { tryParse } from 'be-enhanced/cpu.js';
 const reOfExportingStatement = [
     {
-        regExp: new RegExp(String.raw `^(?<eventName>[\w])`),
+        regExp: new RegExp(String.raw `^(?<eventName>[\w]+)`),
         defaultVals: {}
     }
 ];

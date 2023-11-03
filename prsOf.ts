@@ -4,7 +4,7 @@ import {arr, tryParse} from 'be-enhanced/cpu.js';
 
 const reOfExportingStatement: Array<RegExpOrRegExpExt<Partial<ExportingRule>>> = [
     {
-        regExp: new RegExp(String.raw `^(?<eventName>[\w])`),
+        regExp: new RegExp(String.raw `^(?<eventName>[\w]+)`),
         defaultVals: {}
     }
 ];

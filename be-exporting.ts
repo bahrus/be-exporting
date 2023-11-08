@@ -46,7 +46,7 @@ export class BeExporting extends BE<AP, Actions> implements Actions{
     }
 }
 
-export async function tbd(attr: string){
+export async function parse(attr: string){
     let scriptEl: HTMLScriptElement | undefined;
     if(!scriptLookup.has(attr)){
         scriptEl = document.createElement('script');

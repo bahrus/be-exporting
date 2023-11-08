@@ -38,7 +38,7 @@ export class BeExporting extends BE {
         };
     }
 }
-export async function tbd(attr) {
+export async function parse(attr) {
     let scriptEl;
     if (!scriptLookup.has(attr)) {
         scriptEl = document.createElement('script');

@@ -36,9 +36,9 @@ export class BeExporting extends BE<AP, Actions> implements Actions{
             const {eventName} = exportingRule;
             const attr = enhancedElement.getAttribute(eventName);
             if(attr === null) throw 404;
-            const exports = await tbd(attr);
+            const exports = await parse(attr);
             (<any>self)[eventName] = {...exports};
-            console.log({attr});
+            //console.log({attr});
         }
         return {
             resolved: true

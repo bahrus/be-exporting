@@ -29,9 +29,9 @@ export class BeExporting extends BE {
             const attr = enhancedElement.getAttribute(eventName);
             if (attr === null)
                 throw 404;
-            const exports = await tbd(attr);
+            const exports = await parse(attr);
             self[eventName] = { ...exports };
-            console.log({ attr });
+            //console.log({attr});
         }
         return {
             resolved: true

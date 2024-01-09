@@ -2,7 +2,6 @@ import {BE, propDefaults, propInfo} from 'be-enhanced/BE.js';
 import {BEConfig} from 'be-enhanced/types';
 import {XE} from 'xtal-element/XE.js';
 import {Actions, AllProps, AP, PAP, ProPAP, POA, ExportingRule} from './types';
-import {register} from 'be-hive/register.js';
 
 const scriptLookup: Map<string, HTMLScriptElement> = new Map();
 
@@ -92,9 +91,8 @@ export function waitForScriptToLoad(scriptEl: HTMLScriptElement): Promise<void>{
 
 export interface BeExporting extends AllProps {}
 
-const tagName = 'be-exporting';
-const ifWantsToBe = 'exporting';
-const upgrade = '*';
+export const tagName = 'be-exporting';
+
 
 const xe = new XE<AP, Actions>({
     config:{
@@ -116,5 +114,3 @@ const xe = new XE<AP, Actions>({
     },
     superclass: BeExporting
 });
-
-register(ifWantsToBe, upgrade, tagName);

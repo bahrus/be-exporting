@@ -1,6 +1,5 @@
 import { BE, propDefaults, propInfo } from 'be-enhanced/BE.js';
 import { XE } from 'xtal-element/XE.js';
-import { register } from 'be-hive/register.js';
 const scriptLookup = new Map();
 export class BeExporting extends BE {
     static get beConfig() {
@@ -81,9 +80,7 @@ export function waitForScriptToLoad(scriptEl) {
         }, { once: true });
     });
 }
-const tagName = 'be-exporting';
-const ifWantsToBe = 'exporting';
-const upgrade = '*';
+export const tagName = 'be-exporting';
 const xe = new XE({
     config: {
         tagName,
@@ -104,4 +101,3 @@ const xe = new XE({
     },
     superclass: BeExporting
 });
-register(ifWantsToBe, upgrade, tagName);
